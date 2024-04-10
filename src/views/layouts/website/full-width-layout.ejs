@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <%- //include('../partials/cms/meta.ejs') %>
+
+    <title>CMS website</title>
+
+    <%- include('../../partials/website/import-header.ejs') %>
+  </head>
+
+  <body>
+    <!-- ----- ----- header ----- ------->
+    <%- include('../../partials/website/header.ejs') %>
+    <div><%- body %></div>
+    <!-- footer -->
+    <%- include('../../partials/website/footer.ejs') %>
+  </body>
+</html>
+<%- include('../../partials/website/import-footer.ejs') %>
+

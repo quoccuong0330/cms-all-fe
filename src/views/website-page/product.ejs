@@ -1,0 +1,29 @@
+<main>
+  <!-- main -->
+  <div class="main col-12 d-flex pt-3 pb-3">
+    <div class="list col-3 justify-content-start pt-4 pl-3 d-flex align-items-start">
+      <ul class="pl-4">
+        <% if(productPageUI.category && productPageUI.category.length > 0) {%>
+          <%for(const item of productPageUI.category) { %>
+            <a href="<%=item.slug%>"><li><%=item.name%></li></a>
+        <%}}%>
+      </ul>
+    </div>
+    <div class="body col-9 d-flex flex-wrap pl-3 pr-3">
+
+      <% if(productPageUI.product && productPageUI.product.length > 0) { %>
+        <%for(const item of productPageUI.product) {%>
+          <div class="product-wrapper col-2 d-flex flex-column justify-content-center">
+            <img src="<%=item.href_image%>" alt="" class="image-product" />
+            <div class="product-info d-flex flex-column align-items-start">
+              <label class="name mt-2"> <%=item.product.name%></label>
+              <label class="price mt-2"> <%=item.product.price%></label>
+            </div>
+           </div>
+        <%}}%>
+     
+    
+    </div>
+  </div>
+</main>
+

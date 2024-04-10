@@ -1,0 +1,40 @@
+<header class="header">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex align-items-center justify-content-between">
+          <a class="d-flex justify-content-center align-items-center logo-wrapper" href="/home">
+              <% if(!headerUI.logo || headerUI.logo.length === 0) {%>
+                <img src="" alt="" class="logo" />
+              <%} else { %>
+                <img src="<%=headerUI.logo[0].value%>" alt="" class="logo" />
+              <%}%>
+
+
+              <% if(!headerUI.name || headerUI.name.length === 0) {%>
+                <h2 class="pl-3"></h2>
+              <%} else { %>
+                <h2 class="pl-3"><%=headerUI.name[0].value%></h2>
+              <%}%>
+          </a>
+          <div class="right-col">
+            <div class="wrap-menu">
+              <ul>
+                <% for (const key of sidebar) { if(block_table.indexOf(key.page_id)<0){ %>
+                    <li>
+                        <div class="<%=key.page_id==active_page.parent_id?'active':'' %>">
+                            <a href="<%=key.href%>">
+                                <%=key.title%>
+                            </a>
+                        </div>
+                    </li>
+                    <% } } %>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+

@@ -1,0 +1,8 @@
+[
+    {
+        "name": "logo-header",
+        "type": "image",
+        "default":"",
+        "page_id":1
+    }
+]

@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <div class="gap-sm"></div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Init database</label>
+        <textarea class="form-control" id="input-json-file" rows="10"></textarea>
+        <div class="d-flex justify-content-center mt-2">
+          <button type="button" onclick="handleInitDB()" class="btn btn-primary mr-3">Init database</button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            onclick="handleUploadFile('json')"
+            data-toggle="modal"
+            data-target="#Modal"
+          >
+            Delete database
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id=" ModalLabel">action</h5>
+          <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">Do you want delete this category?</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="handleResetDB()">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

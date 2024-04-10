@@ -1,0 +1,104 @@
+/* ------------------------ css front end ------------------------ */
+.html,
+body,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+body {
+  background-color: #f4f5f7;
+}
+
+html {
+  position: relative;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+
+main {
+  margin-top: 120px;
+}
+
+/* ------------------- header ------------------- */
+
+.logo {
+  width: 80px;
+  height: 120px;
+}
+
+a.logo-wrapper:hover {
+  color: #000;
+}
+
+.wrap-menu > ul {
+  display: flex;
+  margin: 0;
+  align-items: center;
+}
+
+.wrap-menu > ul > li {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.wrap-menu > ul > li:hover > a {
+  color: red;
+}
+
+ul > li > .active > a {
+  color: red;
+}
+
+/* ------------------- footer ------------------- */
+
+.logo-footer {
+  width: 80px;
+  height: 80px;
+}
+
+.list-address {
+  list-style: none;
+  padding: 0;
+}
+
+.list-address > li {
+  margin-top: 4px;
+}
+
+.copy-right {
+  color: #000;
+  padding: 20px;
+}
+
+/*----------------*/
+* {
+  box-sizing: border-box;
+}
+
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+

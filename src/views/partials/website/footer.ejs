@@ -1,0 +1,47 @@
+  <footer class="container-fluid bg-light pt-3 border-top">
+    <div class="gap-sm"></div>
+      <div class="row">
+         <div class="col-12 d-flex justify-content-center">
+            <div class="col-md-2 flex-column align-items-center d-flex"> 
+              <% if(!footerUI.logo || footerUI.logo.length === 0) {%>
+                <img src="" alt="" class="logo" />
+              <%} else { %>
+                <img src="<%=footerUI.logo[0].value%>" class="logo-footer" />
+              <%}%>
+
+              <% if(!footerUI.name || footerUI.name.length === 0) {%>
+                <h2 class="pl-3"></h2>
+              <%} else { %>
+                <h2 class="pl-3"><%footerUI.name[0].value%></h2>
+              <%}%>
+            </div>
+
+           <% if(footerUI.column && footerUI.column.length > 0) {%>
+              <% for(let i = 0; i < footerUI.column.length; i++) {%>
+                <div class="col-md-2"> <u><%=footerUI.column[i].value%>:</u>
+                  <ul class="list-address">
+                    <br />
+                    <% let obj = footerUI['column_'+i]%>
+                    <% if(obj.length > 0) { %>
+                      <%for(const item of obj) { %>
+                        <a href="<%=item.attr_href%>"><li><%=item.value%></li>
+                      <%}%>
+                    <%}%>
+                  </ul>
+                </div>
+            <%} }%>
+           
+
+         </div>
+     </div>
+      <div class="copy-right d-flex justify-content-center">
+        <% if(!footerUI.copyright || footerUI.copyright.length === 0) {%>
+          <p>@Copyright by </p>
+        <%} else { %>
+          <p>@Copyright by <%=footerUI.copyright[0].value%></p>
+
+        <%}%>
+      </div>
+    <div class="gap-sm"></div>
+
+    </footer>

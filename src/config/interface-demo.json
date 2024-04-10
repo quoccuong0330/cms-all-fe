@@ -1,0 +1,32 @@
+[
+  {
+    "page_id": "a2",
+    "title": "Tarng chu",
+    "href": "/cms/static-content/page",
+    "child": [
+      {
+        "page_id": "a21",
+        "title": "Quản lý nội dung tĩnh",
+        "href": "/cms/static-content/page",
+        "page_name": "cms-page/static-content",
+        "child": []
+      }
+    ]
+  },
+  {
+    "page_id": "a2",
+    "title": "Nội dung tĩnh",
+    "href": "/cms/static-content/page",
+    "child": [
+      {
+        "page_id": "a21",
+        "title": "Quản lý nội dung tĩnh",
+        "href": "/cms/static-content/page",
+        "page_name": "cms-page/static-content"
+      }
+    ]
+  }
+]
+
+
+

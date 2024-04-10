@@ -1,0 +1,18 @@
+[
+  {
+    "page_id": "b1",
+    "title": "Trang chu",
+    "href": "/home",
+    "page_name": "website-page/home",
+    "child": []
+  },
+  { "page_id": "b2", "title": "San pham", "href": "/product", "page_name": "website-page/product", "child": [] },
+  {
+    "page_id": "b4",
+    "title": "Ung tuyen",
+    "href": "/detail-product",
+    "page_name": "website-page/detail-product",
+    "child": []
+  }
+]
+

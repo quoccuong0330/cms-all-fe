@@ -1,0 +1,60 @@
+<main>
+    <!-- main -->
+    <div class="banner-header d-flex justify-content-center w-100 owl-carousel owl-theme" >
+      <% if(homePageUI.slide && homePageUI.slide.length > 0) {%>
+        <%for(const item of homePageUI.slide) { %>
+            <img src="<%=item.value%>" alt="" class="banner">
+        <%}}%>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="main col-12 d-flex">
+          <div
+            class="list col-6 justify-content-center d-flex align-items-start"
+          >
+            <div class="wrap">
+              <ul>
+                <% if(homePageUI.left_content && homePageUI.left_content.length > 0) {%>
+                  <%for(const item of homePageUI.left_content) { %>
+                    <a href="<%=item.attr_href%>"><li><%=item.value%></li></a>
+                <%}}%>
+
+              </ul>
+            </div>
+          </div>
+          <div
+            class="banner col-6 d-flex align-items-start justify-content-center"
+          >
+          <% if(!homePageUI.banner || homePageUI.banner.length === 0) {%>
+            <img src="" class="img-banner" />
+            <%} else {%>
+            <img src="<%=homePageUI.banner[0].value%>" class="img-banner"/>
+              <%}%>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mb-4">
+      <div class="w-100 d-flex justify-content-center mt-4">
+        <% if(!homePageUI.feature || homePageUI.feature.length === 0) {%>
+        <h1>Product 1</h1>
+        <%} else {%>
+        <h1><%=homePageUI.feature[0].value%></h1>
+          <%}%>
+      </div>
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+         <% if(homePageUI.product && homePageUI.product.length > 0) { %>
+          <%for(const item of homePageUI.product) {%>
+            <div class="product-wrapper col-2 d-flex flex-column justify-content-center">
+              <img src="<%=item.href_image%>" alt="" class="image-product" />
+              <div class="product-info d-flex flex-column align-items-start">
+                <label class="name mt-2"> <%=item.product.name%></label>
+                <label class="price mt-2"> <%=item.product.price%></label>
+              </div>
+             </div>
+          <%}}%>
+      </div>
+    </div>
+  </main>

@@ -1,0 +1,34 @@
+<div class="container d-flex justify-content-center">
+    <div class=" col-8">
+        <div class="col-12"> 
+            <div class="wrap-form">
+                <div class="filter-btn-list">
+                </div>
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">PageId</th>
+                        <th scope="col">Name page</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <% const path = '/cms/static-content/' + type + '/'; %>
+                        <% if (typeof pageArrayByPage !== 'undefined' && pageArrayByPage.length > 0) { %>
+                            <% for (const item of pageArrayByPage) { %>
+                                <% const href = path + item.id; %>
+                                <% var i = 1 %>
+                            <tr>
+                                <th scope="row"><%=item.id%></th>
+                                <td><%= item.name %></td>
+                                <td><a href="<%= href %>">Edit</a></td>
+                            </tr>
+                            <%  i++; 
+                            } %>
+                        <%}%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
